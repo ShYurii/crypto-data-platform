@@ -1,0 +1,82 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.dist-info/
+.venv/
+venv/
+.env/
+
+# =========================
+# Airflow
+# =========================
+airflow.db
+airflow-webserver.pid
+airflow-scheduler.pid
+logs/
+dags/__pycache__/
+
+# Airflow local configs
+airflow.cfg
+webserver_config.py
+
+# =========================
+# Spark
+# =========================
+spark-logs/
+*.crc
+derby.log
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+*.log
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Secrets / Credentials (VERY IMPORTANT)
+# =========================
+*.key
+*.pem
+*.json
+*.yaml
+*.yml
+
+# BUT allow code configs explicitly if needed:
+!docker-compose.yml
+!dags/
+!plugins/
+!requirements.txt
+
+# =========================
+# Project specific (IMPORTANT for you)
+# =========================
+# Spark output / temp
+output/
+tmp/
+target/
+
+# Metabase / BI (if local files exist)
+metabase.db
+metabase-data/
+
+# Postgres dumps (if you ever create)
+*.dump
+*.sql
