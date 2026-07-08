@@ -96,8 +96,8 @@ default_args = {
 with DAG(
     dag_id="bitcoin_etl_spark_dag",
     start_date=datetime(2024, 1, 1),
-    # schedule="* * * * *",
-    schedule="*/5 * * * *",
+    schedule="* * * * *",
+    # schedule="*/5 * * * *",
     catchup=False,
     default_args=default_args,
     tags=["bitcoin", "etl", "spark"],
